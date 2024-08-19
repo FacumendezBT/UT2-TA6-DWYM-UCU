@@ -1,17 +1,19 @@
-const temp = document.getElementById('temp');
-const toCelsiusButton = document.getElementById('toCelsius');
-const toFahrenheitButton = document.getElementById('toFahrenheit');
 
-toCelsiusButton.addEventListener('click', () => {
-    let tempValue = parseFloat(temp.value);
-    convertToCelsius(tempValue);
-});
+window.onload = () => {
+    const temp = document.getElementById('temp');
+    const toCelsiusButton = document.getElementById('toCelsius');
+    const toFahrenheitButton = document.getElementById('toFahrenheit');
 
-toFahrenheitButton.addEventListener('click', () => {
-    let tempValue = parseFloat(temp.value);
-    convertToFahrenheit(tempValue);
-});
+    toCelsiusButton.addEventListener('click', () => {
+        let tempValue = parseFloat(temp.value);
+        convertToCelsius(tempValue);
+    });
 
+    toFahrenheitButton.addEventListener('click', () => {
+        let tempValue = parseFloat(temp.value);
+        convertToFahrenheit(tempValue);
+    });
+}
 /**
  * Convierte la temperatura a Celsius
  * @param {number} temp - Temperatura a convertir
